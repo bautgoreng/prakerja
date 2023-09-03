@@ -326,6 +326,7 @@ package main
 
 import (
 	"log"
+	"os"
 	"prakerja/config"
 	"prakerja/routes"
 
@@ -334,20 +335,20 @@ import (
 )
 
 func main() {
-	loadEnv()
+	//loadEnv()
 	config.InitDatabase()
 	e := echo.New()
 	routes.InitRoute(e)
-	e.Start(":8000")
+	e.Start(getPort())
 }
 
-/*func getPort() string {
+func getPort() string {
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8000"
 	}
 	return ":" + port
-}*/
+}
 
 func loadEnv() {
 	err := godotenv.Load()
