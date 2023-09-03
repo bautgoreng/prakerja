@@ -1,0 +1,16 @@
+/*package database
+
+import (
+	"GO/config"
+	"GO/models"
+)
+
+func GetUsers() (interface{}, error) {
+	var users []models.User
+
+	if e := config.DB.Find(&users).Error; e != nil {
+		return nil, e
+	}
+	return users, nil
+}
+*/
