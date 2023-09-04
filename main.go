@@ -335,7 +335,7 @@ import (
 )
 
 func main() {
-	//loadEnv()
+	loadEnv()
 	config.InitDatabase()
 	e := echo.New()
 	routes.InitRoute(e)
@@ -343,7 +343,7 @@ func main() {
 }
 
 func getPort() string {
-	port := os.Getenv("PORT")
+	port := os.Getenv("DATABASE_PORT")
 	if port == "" {
 		port = "8000"
 	}
