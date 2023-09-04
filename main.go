@@ -343,7 +343,7 @@ func main() {
 }
 
 func getPort() string {
-	port := os.Getenv("DATABASE_PORT")
+	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8000"
 	}
