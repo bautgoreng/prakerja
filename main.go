@@ -335,7 +335,7 @@ import (
 )
 
 func main() {
-	loadEnv()
+	//loadEnv()
 	config.InitDatabase()
 	e := echo.New()
 	routes.InitRoute(e)
